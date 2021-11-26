@@ -6,7 +6,7 @@
 
 int main()
 {
-    ICodeFactory* icd = new CPPCodeFactory();
+    ICodeFactory* icd = new JavaCodeFactory();
     CodeGenerator* cd = new CodeGenerator(icd);
     std::cout << cd->generateProgram() << std::endl;
     delete icd;

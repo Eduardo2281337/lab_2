@@ -10,7 +10,7 @@ private:
 public:
     CodeGenerator(ICodeFactory* factory) : p(factory) {}
     std::string generateProgram() {
-        auto myclass = p->createClassUnit("MyClass", 0);
+        auto myclass = p->createClassUnit("MyClass", 0, JavaClassUnit::PUBLIC);
 
         auto methodUnit1 = p->createMethodUnit("testFunc1", "void", 0);
         myclass->add(methodUnit1, CPPClassUnit::PUBLIC);
