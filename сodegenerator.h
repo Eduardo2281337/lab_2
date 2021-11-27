@@ -1,0 +1,4 @@
+#ifndef СODEGENERATOR_H
+#define СODEGENERATOR_H
+
+#endif // СODEGENERATOR_H
