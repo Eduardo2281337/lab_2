@@ -29,13 +29,7 @@ public:
         CONST   = 1 << 2
     };
 public:
-    /**
-     * @brief Конструктор класса MethodUnit принимает
-     * имя функции, тип возвращаемого значения и флаги
-     * @param name
-     * @param returnType
-     * @param flags
-     */
+
     CPPMethodUnit(const std::string& name, const std::string& returnType, Flags flags) :
             m_name(name), m_returnType(returnType), m_flags(flags) { }
     void add(const std::shared_ptr<Unit>& unit, Flags flags = 0) {
@@ -137,10 +131,10 @@ public:
         if (m_flags & STATIC) {
             result += "static ";
         }
-        if (m_flags & ABSTRACT) {
+        else if (m_flags & ABSTRACT) {
             result += "abstract ";
         }
-        if (m_flags & FINAL) {
+        else if (m_flags & FINAL) {
             result += "final ";
         }
         result += m_returnType + " ";
